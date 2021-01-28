@@ -1,10 +1,10 @@
+
+import sys
 import discord
 import os
-import requests
-import json
-import random
-from replit import db
 
+
+print ("pouet")
 
 client = discord.Client()
 
@@ -26,16 +26,10 @@ async def on_message(message):
 
   print(f'Auteur {message.author}.')
   print("message" + msg)
-
-  message.react('😄');
+  sys.stdout.flush()
 
 
   if msg.startswith('$start'):
     await message.channel.send ("demarrage du jeu complots!")
 
-
-
-
-
 client.run(os.getenv('TOKEN'))
-
